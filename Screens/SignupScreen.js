@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet, ScrollView, ImageBackground} from 'react-native';
+import { View, Text, TextInput, StyleSheet, ScrollView, ImageBackground, Alert} from 'react-native';
 import { AsyncStorage } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -56,7 +56,19 @@ export default class SignupScreen extends React.Component {
                         username: this.state.username,
                         password: this.state.password
                     }
-                    AsyncStorage.setItem(this.state.username, JSON.stringify(userData)).then(() => this.props.navigation.navigate('InnerStackNavigator', {username: this.state.username}));
+                    // AsyncStorage.setItem(this.state.username, JSON.stringify(userData)).then(() => this.props.navigation.navigate('InnerStackNavigator', {username: this.state.username}));
+                    AsyncStorage.setItem(this.state.username, JSON.stringify(userData)).then(() => { 
+                        this.props.navigation.navigate('WelcomeScreen');
+                        Alert.alert(
+                            'Create account',
+                            'Account created!',
+                            [
+                                { text: 'OK', onPress: () => console.log('OK Pressed') },
+                            ],
+                            { cancelable: false }
+                        );
+                    });
+                    
                 } else {
                     alert('Username already exists.');
                 }

@@ -2,25 +2,8 @@ import React from 'react';
 import { Modal, View, Text, TextInput, StyleSheet, AsyncStorage, FlatList, Image, ScrollView, TouchableOpacity, TouchableHighlight, Alert} from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements'
 import CollapsibleList from 'react-native-collapsible-list';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-// export default class ScreenOne extends React.Component {
-
-//     render() {
-//         var id = this.props.navigation.state.params;
-//         // console.log('ID => ', id);
-//         AsyncStorage.getAllKeys().then((data) => {
-//             console.log(data);
-//         })
-//     // console.log(AsyncStorage.getAllKeys());
-//         return (
-//             <View style={styles.container}>
-//                 <Text>Screen one</Text>
-                
-//             </View>
-//         );
-//     }
-
-// }
 
 export default class Home extends React.Component {
     constructor() {
@@ -35,7 +18,12 @@ export default class Home extends React.Component {
     }
     
     render() {
-   
+        const users = [
+            {
+                name: 'brynn',
+                avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
+            },
+];
         let data = [
             {
                 name: 'Bonsai Sushi Bar',
@@ -109,40 +97,55 @@ export default class Home extends React.Component {
                         data.map((u, i) => {
                             return (
                                 <Card image={{ uri: u.Image}} key={i} >
-                                    <Text style={{ marginBottom: 10 }}>
-                                        Name: {u.name}
+                                    <Text style={{ marginBottom: 10 }} > <Icon name='map-pin' size={20} color='black' />   {u.name}
+                                    </Text>
+                                    <Text style={{ marginBottom: 10}}>
+                                        <Icon name='clock-o' size={20} color='black' />   Opening Hours: {u.OpenHours}
                                     </Text>
                                     <Text style={{ marginBottom: 10 }}>
-                                        Opening Hours: {u.OpenHours}
+                                        <Icon name='home' size={20} color='black'/>   Address: {u.Address}
                                     </Text>
                                     <Text style={{ marginBottom: 10 }}>
-                                        Address: {u.Address}
+                                        <Icon name='envelope' size={20} color='black' />   Contact: {u.Phone}
                                     </Text>
                                     <Text style={{ marginBottom: 10 }}>
-                                        Contact: {u.Phone}
-                                    </Text>
-                                    <Text style={{ marginBottom: 10 }}>
-                                        Rating: {u.Review}
+                                        <Icon name='star' size={20} color='black' />   Rating: {u.Review}
                                     </Text>
 
-                                    <Button
+                                    {/* <Button
                                         icon={{ name: 'code' }}
                                         backgroundColor='#03A9F4'
                                         buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
-                                        title='VIEW NOW' 
-                                        onPress={() => {
-                                            this.setModalVisible(true);
-                                        }}/>
-                                    <CollapsibleList numberOfVisibleItems={1}>
-                                        <View style={styles.collapsibleItem}>
-                                            <Text>Hello Collapsable List :)</Text>
+                                        title='VIEW NOW'/> */}
+                                    <CollapsibleList numberOfVisibleItems={1} buttonContent={<Text style={styles.viewCollapsible}>  <Icon
+                                        name='angle-double-right'
+                                        size={24}
+                                        color='black'
+                                    />  View Reviews</Text>}>
+                                        
+                                        <View style={styles.collapsibleItem} >
+                                            <Text style={{color: '#fff'}} >Hello Collapsable List :)</Text>
                                         </View>
-                                        <View style={styles.collapsibleItem}>
+                                        <View style={{}}>
+                                            <Card title='HELLO WORLD' >
+                                                <Text style={{ marginBottom: 10 }}>
+                                                    The idea with React Native Elements is more about component structure than actual design.
+                                                </Text>
+                                            </Card>
+                                        </View>
+                                        <View>
+                                            <Card title='HELLO WORLD 2' >
+                                                <Text style={{ marginBottom: 10 }}>
+                                                    The idea with React Native Elements is more about component structure than actual design.
+                                                </Text>
+                                            </Card>
+                                        </View>
+                                        {/* <View style={styles.collapsibleItem}>
                                             <Text>Collapsable List Item</Text>
                                         </View>
                                         <View style={styles.collapsibleItem}>
                                             <Text>Collapsable List Item</Text>
-                                        </View>
+                                        </View> */}
                                     </CollapsibleList>
                                 </Card>
                                 
@@ -161,5 +164,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    viewCollapsible: {
+        backgroundColor: '#03A9F4',
+        width: "100%", 
+        fontSize: 20,
+        paddingTop: 5,
+        paddingBottom: 5,
+        textAlign: 'center',
+        color: "#fff",
+        marginTop: 20
     }
 });
