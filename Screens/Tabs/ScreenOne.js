@@ -31,7 +31,17 @@ export default class Home extends React.Component {
                 OpenHours: '13h PM - 12h AM',
                 Phone: '0616-830380',
                 Review: '4.7/5',
-                Image: 'https://i.ytimg.com/vi/NEwcAxFxDVw/maxresdefault.jpg'
+                Image: 'https://i.ytimg.com/vi/NEwcAxFxDVw/maxresdefault.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'La Paix',
@@ -39,7 +49,17 @@ export default class Home extends React.Component {
                 OpenHours: '13h PM - 12h AM',
                 Phone: '05355-66675',
                 Review: '3.9/5',
-                Image: 'https://media-cdn.tripadvisor.com/media/photo-s/05/68/7d/5e/cafe-de-paix.jpg'
+                Image: 'https://media-cdn.tripadvisor.com/media/photo-s/05/68/7d/5e/cafe-de-paix.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'Forest Restaurant',
@@ -47,14 +67,34 @@ export default class Home extends React.Component {
                 OpenHours: '13h PM - 11h45 PM',
                 Phone: '05355-66544',
                 Review: '3.7/5',
-                Image: 'https://i.pinimg.com/originals/6f/88/60/6f8860457807b5af087226d5e435f89e.jpg'
+                Image: 'https://i.pinimg.com/originals/6f/88/60/6f8860457807b5af087226d5e435f89e.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             }, {
                 name: "Restaurant L'Italien",
                 Address: 'Avenue Omar Ibn Al Khattab, Fes',
                 OpenHours: '11:30 AM- 12h AM',
                 Phone: '05359-43384',
                 Review: '3.8/5',
-                Image: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/07/8e/b8/cena.jpg'
+                Image: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/07/8e/b8/cena.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'La Grillardière Fès',
@@ -62,7 +102,17 @@ export default class Home extends React.Component {
                 OpenHours: '10h AM - 12h AM',
                 Phone: '05359-41731',
                 Review: '4.1/5',
-                Image: 'http://www.menudujour.ma/Menudujour/image?nomP=5A1293151D27453A_2_20141030150157&idR=87325892A713E965'
+                Image: 'http://www.menudujour.ma/Menudujour/image?nomP=5A1293151D27453A_2_20141030150157&idR=87325892A713E965',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'Blend',
@@ -70,7 +120,17 @@ export default class Home extends React.Component {
                 OpenHours: '12h AM - 12h AM',
                 Phone: '05224-91122',
                 Review: '4.3/5',
-                Image: 'http://www.viepratique.ma/media_external/entreprises_pictures/3277486/3277486_664619475_306617059.jpg'
+                Image: 'http://www.viepratique.ma/media_external/entreprises_pictures/3277486/3277486_664619475_306617059.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'Le Bistrot Chic',
@@ -78,7 +138,17 @@ export default class Home extends React.Component {
                 OpenHours: '13h PM - 1h AM',
                 Phone: '05222-97878',
                 Review: '4.4/5',
-                Image: 'http://www.eazylife.ma/wp-content/uploads/2017/10/bistrot-chic.jpg'
+                Image: 'http://www.eazylife.ma/wp-content/uploads/2017/10/bistrot-chic.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
             {
                 name: 'I Ristorante Italiano',
@@ -86,7 +156,17 @@ export default class Home extends React.Component {
                 OpenHours: 'Mon-Sat 12–3PM and 7:30–11PM Sun 12–4PM and 7: 30–10: 45PM',
                 Phone: '05229-46160',
                 Review: '4.3/5',
-                Image: 'http://www.iresto.ma/upload/blog/iresto-1.jpg'
+                Image: 'http://www.iresto.ma/upload/blog/iresto-1.jpg',
+                Reviews: [
+                    {
+                        username: 'Mouad',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    },
+                    {
+                        username: 'Zineb',
+                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ]
             },
 
         ]
@@ -126,7 +206,20 @@ export default class Home extends React.Component {
                                         <View style={styles.collapsibleItem} >
                                             <Text style={{color: '#fff'}} >Hello Collapsable List :)</Text>
                                         </View>
-                                        <View style={{}}>
+                                        {
+                                            u.Reviews.map((w, y) => {
+                                                return (
+                                                    <View style={{}} key={i}>
+                                                        <Card title={w.username}>
+                                                            <Text style={{ marginBottom: 10 }}>
+                                                                {w.description}
+                                                             </Text>
+                                                        </Card>
+                                                    </View>
+                                                )
+                                            }) 
+                                        }
+                                        {/* <View style={{}}>
                                             <Card title='HELLO WORLD' >
                                                 <Text style={{ marginBottom: 10 }}>
                                                     The idea with React Native Elements is more about component structure than actual design.
@@ -139,7 +232,7 @@ export default class Home extends React.Component {
                                                     The idea with React Native Elements is more about component structure than actual design.
                                                 </Text>
                                             </Card>
-                                        </View>
+                                        </View> */}
                                         {/* <View style={styles.collapsibleItem}>
                                             <Text>Collapsable List Item</Text>
                                         </View>

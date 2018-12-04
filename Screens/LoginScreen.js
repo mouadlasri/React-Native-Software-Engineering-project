@@ -53,7 +53,9 @@ export default class LoginScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Login</Text>
+                <View style={[{ width: "90%", marginBottom: 50, textAlign: 'center', justifyContent: 'center', alignItems: 'center'}]}>
+                    <Text style={styles.headerTitle}>Login</Text>
+                </View>
                 <View style={[{ width: "90%", width: 370, marginTop: 10, paddingLeft: 30 }]}>
                     <Input
                         placeholder='Enter username..'
@@ -125,5 +127,14 @@ const styles = StyleSheet.create({
     inputFields: {
         marginTop: 30,
         width: '90%'
+    },
+    headerTitle: {
+        fontFamily: 'Roboto',
+        fontSize: 30,
+        marginTop: 0,
+        paddingTop: 0,
+        color: '#000',
+        fontStyle: 'italic',
+        textDecorationLine: 'underline'
     }
 });

@@ -79,10 +79,10 @@ export default class SignupScreen extends React.Component {
 
     render() {
         return (
-            <ImageBackground source={{ uri: 'https://us.123rf.com/450wm/mangpor2004/mangpor20041501/mangpor2004150100062/36061046-%E3%83%9C%E3%82%B1%E5%91%B3%E3%82%92%E6%8C%81%E3%81%A4%E3%82%AB%E3%83%95%E3%82%A7%E8%83%8C%E6%99%AF%E3%82%92%E3%81%BC%E3%81%8B%E3%81%97.jpg?ver=6'}} style={{ width: '100%', height: '100%' }}>
+           
                 <View style={styles.container}>
-                    <View style={[{ width: "90%"}]}>
-                        <Text style={styles.headerTitle}>Signup Screen Page</Text>
+                <View style={[{ width: "90%", textAlign: 'center', justifyContent: 'center', alignItems: 'center'}]}>
+                        <Text style={styles.headerTitle}>Signup</Text>
                     </View>
                 
                     <View style={[{ width: "90%", width: 370, marginTop: 30, paddingLeft: 30 }]}>
@@ -174,7 +174,6 @@ export default class SignupScreen extends React.Component {
                         />
                     </View>
                 </View>
-            </ImageBackground>
         );
     }
 
@@ -195,6 +194,7 @@ const styles = StyleSheet.create({
         paddingTop: 0,
         color: '#000',
         paddingLeft: 25,
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        textDecorationLine: 'underline'
     }
 });
