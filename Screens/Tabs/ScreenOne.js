@@ -16,7 +16,11 @@ export default class Home extends React.Component {
     setModalVisible(visible) {
         this.setState({ modalVisible: visible });
     }
-    
+
+    makeOrder(name, menu) {
+        this.props.navigation.navigate('ScreenFive', {name, menu});
+    }
+
     render() {
         const users = [
             {
@@ -40,6 +44,27 @@ export default class Home extends React.Component {
                     {
                         username: 'Zineb',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                    }
+                ],
+                Menu: [
+                    {
+                        name: 'Wok',
+                        price: 75,
+                        image: 'https://scontent.fmad3-7.fna.fbcdn.net/v/t1.15752-9/48186176_1155855544591038_5103522574831190016_n.jpg?_nc_cat=100&_nc_ht=scontent.fmad3-7.fna&oh=40cccbdea67a0516c1003896e1cf9673&oe=5CAE918D',
+                        quantity: 0
+                    },
+                    {
+                        name: 'Chirashi au saumon',
+                        price: 60,
+                        image: 'https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/48384481_307933580055489_1655362348149374976_n.jpg?_nc_cat=108&_nc_ht=scontent-cdg2-1.xx&oh=7d17c6abb83abd7a08370f15c31f9cda&oe=5CA78B56',
+                        quantity: 0
+                    },
+                    {
+                        name: 'Bonsai Crispy',
+                        price: 50,
+                        image: 'https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/47688655_263564520976960_7152386699903893504_n.jpg?_nc_cat=104&_nc_ht=scontent-cdg2-1.xx&oh=fc9030f9daa630ce1b8c58aa098136e8&oe=5C910BFB',
+                        quantity: 0
+                    
                     }
                 ]
             },
@@ -171,7 +196,9 @@ export default class Home extends React.Component {
 
         ]
         return (
+           
             <ScrollView>
+                
                 {/* <Card title="CARD WITH DIVIDER"> */}
                     {
                         data.map((u, i) => {
@@ -192,17 +219,12 @@ export default class Home extends React.Component {
                                         <Icon name='star' size={20} color='black' />   Rating: {u.Review}
                                     </Text>
 
-                                    {/* <Button
-                                        icon={{ name: 'code' }}
-                                        backgroundColor='#03A9F4'
-                                        buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
-                                        title='VIEW NOW'/> */}
-                                    <CollapsibleList numberOfVisibleItems={1} buttonContent={<Text style={styles.viewCollapsible}>  <Icon
-                                        name='angle-double-right'
-                                        size={24}
-                                        color='black'
-                                    />  View Reviews</Text>}>
-                                        
+                                    <View style={[{ width: "90%", marginBottom: 50, textAlign: 'center', justifyContent: 'center', alignItems: 'center' }]}>
+                                        <Button onPress={() => {this.makeOrder(u.name, u.Menu)}}>Make Order</Button>
+                                    </View>
+
+                                    <CollapsibleList numberOfVisibleItems={1} buttonContent={<Text style={styles.viewCollapsible}><Icon name='angle-double-right' size={24} color='black'/>  View Reviews</Text>}>
+                            
                                         <View style={styles.collapsibleItem} >
                                             <Text style={{color: '#fff'}} >Hello Collapsable List :)</Text>
                                         </View>
@@ -219,26 +241,7 @@ export default class Home extends React.Component {
                                                 )
                                             }) 
                                         }
-                                        {/* <View style={{}}>
-                                            <Card title='HELLO WORLD' >
-                                                <Text style={{ marginBottom: 10 }}>
-                                                    The idea with React Native Elements is more about component structure than actual design.
-                                                </Text>
-                                            </Card>
-                                        </View>
-                                        <View>
-                                            <Card title='HELLO WORLD 2' >
-                                                <Text style={{ marginBottom: 10 }}>
-                                                    The idea with React Native Elements is more about component structure than actual design.
-                                                </Text>
-                                            </Card>
-                                        </View> */}
-                                        {/* <View style={styles.collapsibleItem}>
-                                            <Text>Collapsable List Item</Text>
-                                        </View>
-                                        <View style={styles.collapsibleItem}>
-                                            <Text>Collapsable List Item</Text>
-                                        </View> */}
+                                        
                                     </CollapsibleList>
                                 </Card>
                                 

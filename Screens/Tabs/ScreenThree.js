@@ -2,13 +2,38 @@ import React from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
 
 export default class ScreenThree extends React.Component {
+    testFunction() {
+        let orderedItems = {
+            name: 'Bonsai',
+            items: [
+                {
+                    name: 'Sushi',
+                    price: '6.99$'
+                },
+                {
+                    name: 'Rolls',
+                    price: '8.99$'
+                }
+            ]
+        };
 
+        this.props.navigation.navigate('ScreenFour', {
+            data: orderedItems
+        });
+    }
     render() {
         return (
             <ImageBackground source={require('../image.png')} style={{width: '100%', height: '100%'}}>
 
             <View style={styles.container}>
-            
+                    <Button
+                        onPress={() =>
+                            this.testFunction()
+                        }
+                        icon={{ name: 'code' }}
+                        backgroundColor='#03A9F4'
+                        buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
+                        title='TEST' />
                    
                     <View style={[{ width: "90%", margin: 10, fontFamily: "monospace", fontStyle: "italic", textAlign: 'center', justifyContent: 'center', alignItems: 'center'}]}>
                         <Text style={styles.headerText}><Text style={{ color: 'red' }}>Tell</Text>MeWhere</Text>

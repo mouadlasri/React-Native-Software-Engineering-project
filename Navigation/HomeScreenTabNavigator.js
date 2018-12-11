@@ -6,24 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import ScreenOne from '../Screens/Tabs/ScreenOne.js';
 import ScreenTwo from '../Screens/Tabs/ScreenTwo.js';
 import ScreenThree from '../Screens/Tabs/ScreenThree.js';
-
-// class AppTabNavigator extends React.Component {
-
-//     // static navigationOptions = ({navigation}) => {
-//     //     return {
-//     //         headerLeft: (
-//     //             <View style={{padding: 10}}>
-//     //                 <Ionicons name="md-menu" onPress={() => this.props.navigation.navigation('DrawerOpen')} />
-//     //             </View>
-//     //         )
-//     //     }
-//     // }
-//     render() {
-//         return (
-//             <HomeScreenTabNavigator />
-//         )
-//     }
-// }
+import ScreenFour from '../Screens/Tabs/ScreenFour.js';
+import ScreenFive from '../Screens/Tabs/ScreenFive.js';
 
 export default HomeScreenTabNavigator = createBottomTabNavigator({
     ScreenOne: {
@@ -51,6 +35,21 @@ export default HomeScreenTabNavigator = createBottomTabNavigator({
             tabBarIcon: () => (
                 <Ionicons name="md-wallet" size={24} />
             )
+        }
+    },
+    ScreenFour: {
+        screen: ScreenFour,
+        navigationOptions: {
+            tabBarLabel: 'Shop',
+            tabBarIcon: () => {
+                <Ionicons name="md-wallet" size={24} />
+            }
+        }
+    },
+    ScreenFive: {
+        screen: ScreenFive,
+        navigationOptions: {
+            tabBarLabel: 'Make Order'
         }
     }
 }
